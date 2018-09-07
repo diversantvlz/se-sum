@@ -13,7 +13,7 @@ function sum(string $a, string $b): string
         $a = str_pad($a, $bLen, "0", STR_PAD_LEFT);
     }
 
-    for ($pos = strlen($a) - 1; $pos >= 0; $pos--) {
+    for ($pos = $aLen - 1; $pos >= 0; $pos--) {
         $int = $a[$pos] + $b[$pos] + $extra;
         $extra = ($int >= 10) ? 1 : 0;
         $result .= $int % 10;
